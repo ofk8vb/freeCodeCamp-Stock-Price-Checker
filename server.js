@@ -13,7 +13,7 @@ const runner            = require('./test-runner');
 const databaseName = 'stockPriceChecker';
 const app = express();
 app.use(helmet());
-app.use(helmet.contentSecurityPolicy({ directives: { defaultSrc: ["'self'"], scriptSrc: ["'self'", "trusted-cdn.com"] }} ))
+app.use(helmet.contentSecurityPolicy({ directives: { defaultSrc: ["'self'"], scriptSrc: ["'self'"] }} ))
 app.set('trust proxy',true); 
 mongoose.Promise = global.Promise;
 
